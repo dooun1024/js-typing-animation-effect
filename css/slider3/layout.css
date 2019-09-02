@@ -1,0 +1,205 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*-------------------------------------------------------------
+ *						layout.css
+ *-------------------------------------------------------------*/
+	
+	/* ----------	header	---------- */
+		#headerArea							{ width:100%; position:fixed; z-index:1000; background:#fff; border-bottom:1px solid #ccd; }
+		#headerArea > div					{ width:960px; margin:0 auto; }
+		
+		#headLink							{ float:left; }
+		#headLink a							{ display:inline-block; }
+		#headLink img						{ margin:33px 0; transition:all .3s;  }
+		#headLink h1						{ display:none; }
+		
+		.smaller #headLink img				{ margin:17px 0; height:25px; width:auto; }
+	
+	/* ----------	global menu	---------- */
+		#globalMenu							{ margin:27px 0 25px; float:right; transition:all .3s;  }
+		#globalMenu li						{ width:109px; box-sizing:border-box; border-left:1px solid #bebebe; padding:10px 0; text-align:center; transition:all .3s;  }
+		#globalMenu li.search				{ width:41px; display:none; }
+		#globalMenu li div					{ display:none; }
+		
+		.smaller #globalMenu				{ margin:17px 0; }
+		.smaller #globalMenu li				{ padding:0; }
+		
+	
+	/* ----------	sp menu open	---------- */
+		#spMenuOpen							{ display:none; }
+		
+	/* ----------	content top padding	---------- */
+		.contentsTop						{ padding:100px 0 0; }
+	
+	/* ----------	sub menu	---------- */
+		#subMenu							{ width:100%; position:fixed; top:98px; left:50%; transform:translate(-50%, 0); z-index:100; box-sizing:border-box; 
+											  border-bottom:1px solid #ccd; background:#fff; padding:11px 0; transition:all .3s; font-size:90%; padding:10px 0;  }
+		#subMenu ul							{ width:960px; margin:0 auto; }
+		#subMenu li.menuOn a				{ color:#004ea2; }
+		#subMenu a							{ padding:0 35px 0 0; transition: none; }
+		
+		@media screen and ( min-width:976px ) {
+			#subMenu li a:hover					{ padding:0 21px 0 0; color:#004ea2; }
+			#subMenu a:hover:before				{ content:url("./../common/ico_arrow.gif"); width:15px; display: inline-block; box-sizing: border-box; margin-right: -1px; animation:show 0.5s; }
+		}
+		
+		#subMenu.setScroll					{ top:60px; }
+	
+	/* ----------	category	---------- */
+		#category							{ height:200px; overflow:hidden; position:relative; padding:141px 0 0; }
+		#category img						{ min-height:200px; object-fit:cover; }
+		
+	/* ----------	pan navi	---------- */
+		#panNavi							{ position:absolute; top:141px; left:50%; transform:translate(-50%, 0); font-size:75%; }
+		#panNavi ul							{ width:960px; margin:0 auto; }
+		#panNavi li							{ padding:9px 12px 0 0; line-height:22px; color:#fff; }
+		#panNavi li:before					{ content: '>'; margin:0 15px 0 0; }
+		#panNavi li:first-child:before		{ content:''; margin:0px; }
+		#panNavi a							{ color:#fff; }
+		
+		/*	map	*/
+			#category.map					{ padding:98px 0 0; }
+			#category.map #panNavi			{ top:100px; }
+		
+		/*	recruit	*/
+			#category.recruit				{ height:40px; }
+			#category.recruit a				{ color:#000; }
+			#category.recruit #panNavi li	{ color:#535d64;  }
+			
+		/*	contact	*/
+			#category.bgNone				{ padding:98px 0 0; height:40px; }
+			#category.bgNone a				{ color:#000; }
+			.bgNone #panNavi				{ top:98px; }
+			#category.bgNone #panNavi li	{ color:#535d64; }
+			
+			
+	
+	/* ----------	footer	---------- */
+		#footerArea							{ background:url("./../images/bg_footer.jpg") no-repeat left top; background-size:cover; margin:4px 0 0; }
+		#footerArea > div:nth-child(even)	{ background:rgba(80, 90, 100, 0.1); }
+		
+		#footerArea #fixLink				{ padding:51px 0; color:#000; }
+		#fixLink a							{ display:block; box-sizing:border-box; background:#fff; width:600px; margin:0 auto; border:7px solid #bbbfc3; 
+											  padding:8px 15px; text-align:center; font-size:80%; color:#000; }
+		#fixLink a:hover					{ border-color:#c5c200; }
+		#fixLink span						{ display:block; font-size:160%; font-weight:500; line-height:28px; }
+		#fixLink span:before				{ content:url("./../common/ico_mail.png"); margin:0 10px 0 0; }
+		
+	/* ----------	footer sitemap	---------- */
+		#sitemap							{ display:flex; width:960px; margin:0 auto; padding:73px 0 85px; }
+		#sitemap ul							{ display:block; border-left:1px solid #6f767b; padding:0 40px 0 15px; font-size:79%; line-height:22px; }
+		#sitemap ul li.title				{ font-size:130%; margin:15px 0; }
+		#sitemap ul li:first-child			{ margin:0 0 15px; }
+		
+		#sitemap ul							{ width:140px; }
+		#sitemap ul:nth-child(3)			{ width:250px; }
+		
+		#sitemap .tcsGroup					{ position:relative; top:35px; }
+		
+		
+	/* ----------	copyright	---------- */
+		#copyright							{ text-align:center; font-size:83%; padding:0 0 15px; }
+		#copyright p						{ display:none; }
+		
+	/* ----------	page top	---------- */
+		#pageTop							{ position:fixed; right:0; bottom:0; background:#004ea2; display:inline-block; z-index:200; }
+		#pageTop a							{ color:#fff; }
+
+
+/*-------------------------------------------------------------
+ *
+ *						layout.css(ver.SP)
+ *
+ *-------------------------------------------------------------*/
+	@media screen and ( max-width:976px ) {
+		
+		/* ----------	all container	---------- */
+			#allContainer > div				{ width:auto; }
+		
+		/* ----------	header area	---------- */
+			#headerArea						{ width:100% !important; background:#fff; position:absolute; z-index:50; }
+			#headerArea > div				{ width:auto; }
+			
+			#headLink						{ position:fixed; z-index:100; width:100%; background:#fff; border-bottom:1px solid #ccd; }
+			#headLink img, 
+			.smaller #headLink img			{ margin:15px 0 15px 15px; height:20px; width:auto; }
+		
+		/* ----------	global menu	---------- */
+			#globalMenu						{ display:none; position:relative; top:92px; z-index:80; }
+			#globalMenu.setClass			{ display:block; }
+			
+			#globalMenu						{ width:100%; margin:0; }
+			#globalMenu li					{ width:100%; border:0; margin:0; padding:0; }
+			#globalMenu a					{ background:#004ea2; color:#fff; display:block; padding:15px; width:100%; box-sizing:border-box; 
+											  border-bottom:1px solid #fff; text-align:left; }
+			#globalMenu a:hover				{ background:#004ea2; color:#fff; }
+			#globalMenu li li a				{ padding:15px 25px; }
+			
+			.smaller #globalMenu			{ margin:0; }
+			
+			#headerArea.setTop #globalMenu	{ top:50px; }
+			
+		
+		/* ----------	sp menu open	---------- */
+			#spMenuOpen						{ display:block; position:fixed; top:2px; right:5px; z-index:101; }
+		
+		/* ----------	content top padding	---------- */
+			.contentTop						{ padding:70px 0 0; }
+		
+		/* ----------	sub menu	---------- */
+			#subMenu						{ width:100% !important; top:50px; left:0; transform:translate(0, 0); padding:11px 10px; border-top:1px solid #ccd; 
+											  overflow-y: hidden; -ms-overflow-style:none;}
+			#subMenu::-webkit-scrollbar		{ display:none; }
+			#subMenu ul						{ display:flex; overflow-scrolling: touch; }
+			#subMenu li						{ }
+			
+			#subMenu.setScroll				{ top:50px; }
+		
+		/* ----------	category	---------- */
+			#category						{ padding:92px 0 0; height:180px; }
+		
+		/* ----------	pan navi	---------- */
+			#panNavi						{ top:94px; left:10px; transform:translate(0, 0); font-size: 84%; }
+			#panNavi ul						{ width:100%; display:flex; }
+			
+			/*	map	*/
+				#category.map				{ padding:50px 0 0; }
+				#category.map #panNavi		{ top:50px; }
+			
+			/*	contact	*/
+				#category.bgNone			{ padding:50px 0 0; }
+				.bgNone #panNavi			{ top:50px; }
+			
+		
+		/* ----------	footer	---------- */
+			#fixLink a						{ width:80%; }
+			
+			#sitemap						{ display:none; }
+			#copyright p					{ display:block; padding:25px 0; }
+		
+		/* ----------	page top	---------- */
+			
+	}
+	
+/*-------------------------------------------------------------
+ *
+ *						common.css(ver.SP)
+ *
+ *-------------------------------------------------------------*/
+	@media screen and ( max-width:680px ) {
+		/* ----------	header	---------- 
+			#headerContents					{ width:100%; display:block; }
+			
+			#headLink						{ position:fixed; z-index:10; background:rgba(255, 255, 255, 0.9); padding:16px 0 19px 15px; width:100%; margin:0; }
+			#headLink a						{ margin:0 65px 0 0 !important; }
+			#headLink img					{ }*/
+	}
+	
+	@media screen and ( max-width:350px ) {
+		/* ----------	header	---------- 
+			#headLink						{ padding:19px 0 19px 16px; }
+			#headLink img					{ height:21px !important; }*/
+	}
+
+

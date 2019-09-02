@@ -1,0 +1,166 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700|Ropa+Sans&subset=japanese,latin-ext');
+
+/*	common.css	*/
+	body {
+		font-size:95%;
+		font-family:'Noto Sans JP', 'Ropa Sans', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+		line-height:1.672;
+		-webkit-text-size-adjust:100%;
+		color:#6f767b;
+	}
+	
+	a				{ color:#555; text-decoration:none; transition:all .3s; }
+	a:hover			{ color:#00297F; text-decoration:none; }
+	
+	/* ----------	h style	---------- */
+		h1 { font-size:200%; }
+		h2 { font-size:142%; }
+		h3 { font-size:127.8%; font-weight:normal; }
+		h4 { font-size:106.5%; font-weight:normal; }
+		h5 { font-size:100%; }
+		h6 { font-size:93%; }
+		
+	/* ---------- 	font style	---------- */
+	
+	
+	/* ----------	text position	---------- */
+		.textRight							{ text-align:right !important; }
+		.textLeft							{ text-align:left !important; }
+		.textCenter							{ text-align:center !important; }
+	
+	
+	/* ----------	flaot style	---------- */
+		/*	color	*/
+		.flowHidden							{ overflow:hidden; }
+		.left								{ float:left; }
+		.right								{ float:right; }
+		.clearB								{ clear:both; }
+	
+	
+	/* ----------	list style	---------- */
+		/*	color	*/
+		dl, ul								{ display:flex; flex-wrap:wrap; }
+		dt, dd, li							{ box-sizing:border-box; }
+			
+	
+	/* ----------	box style	---------- */
+		/*	color	*/
+		
+		
+	
+	/* ----------	table style	---------- */
+		/*	color	*/
+		table, th, td						{ border-style:solid; border-color:#c7c7c7; }
+		table								{ border-width:1px 0 0 1px; width:100%; }
+		th									{ border-width:0 1px 1px 0; }
+		td									{ border-width:0 1px 1px 0; }
+		
+		table th, table td					{ padding:12px 20px 12px 0; box-sizing:border-box; vertical-align:top; text-align:left; }
+		
+	
+	/* ----------	display style	---------- */
+		/*	color	*/
+		.dispNone, .printDisp				{ display:none; }
+		.spDisp								{ display:none !important; }
+		.pcDisp								{ display:block; }
+	
+	/* ----------	title style	---------- */
+		.subTitle							{ line-height:34px; display:flex; align-items:center; margin:0 0 15px; }
+		.subTitle:after						{ content:""; flex-grow:1; background:#000; display:block; height:2px; margin:0 5px 0 0; }
+		.subTitle span						{ display:inline-block; font-size:160%; font-weight:500; color:#000; padding:0 15px 0 0; }
+		
+		#topics .subTitle span				{ font-size:175%; }
+	
+	/* ----------	margin padding	---------- */
+		/*	color	*/
+	 	
+							
+	
+	/* ----------	white-space	---------- */
+		/*	color	*/
+		.nowrap								{ white-space:nowrap; }
+		
+	
+	/* ----------	animation	---------- */
+		.fadein								{ opacity:0; transform:translate(0, 50px); transition:all 500ms; }
+		.fadein.scrollin					{ opacity:1; transform:translate(0, 0); }
+		
+		@keyframes show	{
+			from							{ opacity:0; }
+			to								{ opacity:100; }
+		}
+		
+		@keyframes hide	{
+			from							{ opacity:100; }
+			to								{ opacity:0; }
+		}
+	
+	/*	bg stripe */
+		.blueStripe							{ background-image:linear-gradient(
+												-45deg, 
+												#fff 25%, 
+												#d0e7f8 25%, #d0e7f8 50%, 
+												#fff 50%, #fff 75%, 
+												#d0e7f8 75%, #d0e7f8
+											  ); 
+											  background-size:12px 12px; }
+		
+		.orangeStripe						{ background-image:linear-gradient(
+												-45deg, 
+												#fff 25%, 
+												#f5edcf 25%, #f5edcf 50%, 
+												#fff 50%, #fff 75%, 
+												#f5edcf 75%, #f5edcf
+											  ); 
+											  background-size:12px 12px; }
+
+	
+	
+/*-------------------------------------------------------------
+ *
+ *						common.css(ver.SP)
+ *
+ *-------------------------------------------------------------*/
+	@media screen and ( max-width:960px ) {
+		
+		/* ----------	body	---------- */
+		/*	color	*/
+			body							{ font-size:85%; }
+		
+		
+		/* ----------	text position	---------- */
+		/*	color	*/
+			.spRight						{ text-align:right !important; }
+			.spLeft							{ text-align:left !important; }
+			.spCenter						{ text-align:center !important; }
+		
+		/* ----------	list style	---------- */
+		/*	color	*/
+			dl, ul							{ display:block; }
+			
+			
+			
+		/* ----------	box style	---------- */
+		/*	color	*/
+			
+			
+		
+		/* ----------	table style	---------- */
+		/*	color	*/
+			table th, table td				{ padding:10px 15px 10px 0; /*width:100% !important;*/ }
+			
+						
+				
+		/* ----------	display style	---------- */
+		/*	color	*/
+			.spDisp							{ display:block !important; }
+			.pcDisp							{ display:none !important; }
+			
+		
+		
+		
+		
+		
+			
+	}
